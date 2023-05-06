@@ -1,0 +1,1 @@
+The VoxelStadt Directory is the main directory and includes all the resource files for the game including entity code and block code.
