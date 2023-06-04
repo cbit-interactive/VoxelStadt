@@ -1,9 +1,12 @@
 package org.iiab.voxelstadt;
 
-import org.lwjgl.Version;
+import net.iiab.lukas.WindowManager;
 
 public class Launcher {
-    public static void Main(String[] args){
-        System.out.println(Version.getVersion());
+    public static void main(String[] args){
+        WindowManager windowManager = new WindowManager();
+        windowManager.init();
+        windowManager.run();
+
     }
 }
