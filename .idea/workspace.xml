@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c30f920-5371-4f9b-be7c-83684315efda" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iiab/voxelstadt/Launcher.java" afterDir="false" />
+    <list default="true" id="9c30f920-5371-4f9b-be7c-83684315efda" name="Changes" comment="Deleted a bunch of stuff and preparations to actually start making this thing!">
+      <change afterPath="$PROJECT_DIR$/assets/assets/font/fontcyrilic.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/assets/font/fontdefault.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/assets/font/fontforestrian.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/assets/font/fontgreek.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/font/font.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/gui/gui.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/language/english.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/language/forestrian.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/language/ninjoan_REF.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/version.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +27,18 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -29,7 +51,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/org/iiab/Credits.txt" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assets/data/version.json" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2POhQrDxihIiDeybJhCxUrZU6J9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -51,6 +76,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Eli\OneDrive\Documents\VS src\VoxelStadt\assets\assets" />
+      <recent name="C:\Users\Eli\OneDrive\Documents\VS src\VoxelStadt\assets\" />
       <recent name="C:\Users\Eli\OneDrive\Documents\VS src\VoxelStadt\src" />
       <recent name="C:\Users\Eli\OneDrive\Documents\VS src\VoxelStadt\src\main" />
     </key>
@@ -99,8 +126,26 @@
       <option name="project" value="LOCAL" />
       <updated>1683411221219</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Deleted a bunch of stuff and preparations to actually start making this thing!">
+      <created>1688947401603</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688947401603</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1. Main files have been created" />
@@ -108,6 +153,7 @@
     <MESSAGE value="Moved two files" />
     <MESSAGE value="Gitignore" />
     <MESSAGE value="MORE CHANGES" />
-    <option name="LAST_COMMIT_MESSAGE" value="MORE CHANGES" />
+    <MESSAGE value="Deleted a bunch of stuff and preparations to actually start making this thing!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted a bunch of stuff and preparations to actually start making this thing!" />
   </component>
 </project>
