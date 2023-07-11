@@ -1,0 +1,242 @@
+Index: build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id(\"java\")\r\n}\r\n\r\ngroup = \"org.iiab.voxelstadt\"\r\nversion = \"1.0-SNAPSHOT\"\r\n\r\nrepositories {\r\n    mavenCentral()\r\n}\r\n\r\ndependencies {\r\n    testImplementation(platform(\"org.junit:junit-bom:5.9.1\"))\r\n    testImplementation(\"org.junit.jupiter:junit-jupiter\")\r\n}\r\n\r\ntasks.test {\r\n    useJUnitPlatform()\r\n}\r\n\r\nval lwjglVersion = \"3.3.2\"\r\nval jomlVersion = \"1.10.5\"\r\nval `lwjgl3-awtVersion` = \"0.1.8\"\r\nval steamworks4jVersion = \"1.9.0\"\r\nval `steamworks4j-serverVersion` = \"1.9.0\"\r\nval lwjglNatives = \"natives-windows\"\r\n\r\nrepositories {\r\n    mavenCentral()\r\n}\r\n\r\ndependencies {\r\n    implementation(platform(\"org.lwjgl:lwjgl-bom:$lwjglVersion\"))\r\n\r\n    implementation(\"org.lwjgl\", \"lwjgl\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-assimp\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-bgfx\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-cuda\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-egl\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-fmod\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-freetype\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-glfw\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-harfbuzz\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-hwloc\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-jawt\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-jemalloc\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-ktx\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-libdivide\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-llvm\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-lmdb\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-lz4\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-meow\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-meshoptimizer\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-nanovg\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-nfd\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-nuklear\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-odbc\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-openal\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-opencl\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-opengl\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-opengles\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-openvr\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-openxr\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-opus\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-ovr\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-par\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-remotery\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-rpmalloc\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-shaderc\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-spvc\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-sse\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-stb\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-tinyexr\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-tinyfd\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-tootle\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-vma\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-vulkan\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-xxhash\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-yoga\")\r\n    implementation(\"org.lwjgl\", \"lwjgl-zstd\")\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-assimp\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-bgfx\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-freetype\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-glfw\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-harfbuzz\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-hwloc\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-jemalloc\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-ktx\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-libdivide\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-llvm\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-lmdb\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-lz4\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-meow\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-meshoptimizer\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-nanovg\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-nfd\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-nuklear\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-openal\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-opengl\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-opengles\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-openvr\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-openxr\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-opus\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-ovr\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-par\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-remotery\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-rpmalloc\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-shaderc\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-spvc\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-sse\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-stb\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-tinyexr\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-tinyfd\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-tootle\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-vma\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-xxhash\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-yoga\", classifier = lwjglNatives)\r\n    runtimeOnly(\"org.lwjgl\", \"lwjgl-zstd\", classifier = lwjglNatives)\r\n    implementation(\"org.joml\", \"joml\", jomlVersion)\r\n    implementation(\"org.lwjglx\", \"lwjgl3-awt\", `lwjgl3-awtVersion`)\r\n    implementation(\"com.code-disaster.steamworks4j\", \"steamworks4j\", steamworks4jVersion)\r\n    implementation(\"com.code-disaster.steamworks4j\", \"steamworks4j-server\", `steamworks4j-serverVersion`)\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle.kts b/build.gradle.kts
+--- a/build.gradle.kts	(revision 443b948893c237e14eef35aad3492310c2657727)
++++ b/build.gradle.kts	(date 1688946188749)
+@@ -31,7 +31,7 @@
+ 
+ dependencies {
+     implementation(platform("org.lwjgl:lwjgl-bom:$lwjglVersion"))
+-
++    implementation ("com.google.code.gson:gson:2.10.1", "gson")
+     implementation("org.lwjgl", "lwjgl")
+     implementation("org.lwjgl", "lwjgl-assimp")
+     implementation("org.lwjgl", "lwjgl-bgfx")
+Index: assets/assets/font/fontforestrian.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/assets/assets/font/fontforestrian.json b/assets/assets/font/fontforestrian.json
+new file mode 100644
+--- /dev/null	(date 1688947329832)
++++ b/assets/assets/font/fontforestrian.json	(date 1688947329832)
+@@ -0,0 +1,7 @@
++{
++  "fontSrc": {
++    "fontPath": "",
++    "fontChars": [],
++    "fontSystem": "Waldgēben'scrībel"
++  }
++}
+\ No newline at end of file
+Index: assets/data/font/font.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/assets/data/font/font.json b/assets/data/font/font.json
+new file mode 100644
+--- /dev/null	(date 1688947329549)
++++ b/assets/data/font/font.json	(date 1688947329549)
+@@ -0,0 +1,17 @@
++{
++  "fontDetailsDefault": {
++    "fontFile": "",
++    "fontVersion": 1.0,
++    "fontTitle": "Curvy",
++    "fontLanguage": "Latin Alphabet"
++  },
++  "fontDetailsForestrian": {
++
++  },
++  "fontDetailsGreek": {
++
++  },
++  "fontDetailsCyrilic": {
++
++  }
++}
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9c30f920-5371-4f9b-be7c-83684315efda\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/iiab/voxelstadt/Launcher.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/src/main/java/org/iiab/Credits.txt\" root0=\"SKIP_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2POhQrDxihIiDeybJhCxUrZU6J9\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Eli/OneDrive/Documents/VS src/sources/lwjgl-assimp-natives-windows.jar&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Eli\\OneDrive\\Documents\\VS src\\VoxelStadt\\src\" />\r\n      <recent name=\"C:\\Users\\Eli\\OneDrive\\Documents\\VS src\\VoxelStadt\\src\\main\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9c30f920-5371-4f9b-be7c-83684315efda\" name=\"Changes\" comment=\"\" />\r\n      <created>1683334024139</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1683334024139</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"1. Main files have been created\">\r\n      <created>1683334303093</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683334303093</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"1. Edited some more stuff&#10;2. FIRST REAL TEST FINISHED. YAY\">\r\n      <created>1683407847465</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683407847465</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Moved two files\">\r\n      <created>1683408074580</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683408074580</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Gitignore\">\r\n      <created>1683408164559</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683408164559</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"MORE CHANGES\">\r\n      <created>1683411221219</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683411221219</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"1. Main files have been created\" />\r\n    <MESSAGE value=\"1. Edited some more stuff&#10;2. FIRST REAL TEST FINISHED. YAY\" />\r\n    <MESSAGE value=\"Moved two files\" />\r\n    <MESSAGE value=\"Gitignore\" />\r\n    <MESSAGE value=\"MORE CHANGES\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"MORE CHANGES\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 443b948893c237e14eef35aad3492310c2657727)
++++ b/.idea/workspace.xml	(date 1688947333310)
+@@ -5,8 +5,21 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="9c30f920-5371-4f9b-be7c-83684315efda" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iiab/voxelstadt/Launcher.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/assets/assets/font/fontcyrilic.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/assets/assets/font/fontdefault.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/assets/assets/font/fontforestrian.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/assets/assets/font/fontgreek.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/assets/data/font/font.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/assets/data/gui/gui.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/assets/data/language/english.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/assets/data/language/forestrian.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/assets/data/language/ninjoan_REF.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/assets/data/version.json" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/net/iiab/lukas/EngineManager.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/net/iiab/lukas/WindowManager.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/iiab/voxelstadt/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iiab/voxelstadt/Launcher.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -29,7 +42,7 @@
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="HighlightingSettingsPerFile">
+-    <setting file="file://$PROJECT_DIR$/src/main/java/org/iiab/Credits.txt" root0="SKIP_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/assets/data/version.json" root0="SKIP_INSPECTION" />
+   </component>
+   <component name="ProjectId" id="2POhQrDxihIiDeybJhCxUrZU6J9" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+@@ -51,6 +64,8 @@
+ }</component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\Eli\OneDrive\Documents\VS src\VoxelStadt\assets\assets" />
++      <recent name="C:\Users\Eli\OneDrive\Documents\VS src\VoxelStadt\assets\" />
+       <recent name="C:\Users\Eli\OneDrive\Documents\VS src\VoxelStadt\src" />
+       <recent name="C:\Users\Eli\OneDrive\Documents\VS src\VoxelStadt\src\main" />
+     </key>
+Index: assets/data/version.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/assets/data/version.json b/assets/data/version.json
+new file mode 100644
+--- /dev/null	(date 1688946132164)
++++ b/assets/data/version.json	(date 1688946132164)
+@@ -0,0 +1,9 @@
++{
++  "versionFull": 0.1,
++  "version" : {
++    "versionMajor": 1,
++    "versionMinor": 0,
++    "versionPatch": 0,
++    "versionTitle": "First Update"
++  }
++}
+\ No newline at end of file
+Index: assets/data/language/ninjoan_REF.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/assets/data/language/ninjoan_REF.json b/assets/data/language/ninjoan_REF.json
+new file mode 100644
+--- /dev/null	(date 1688947329508)
++++ b/assets/data/language/ninjoan_REF.json	(date 1688947329508)
+@@ -0,0 +1,5 @@
++{
++  "language.name": "Ninjoan (Reformed), (7th Revision)",
++  "language.region": "Forestria",
++  "test.first": "Ωλἀ, Φερρα!"
++}
+\ No newline at end of file
+Index: assets/data/language/english.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/assets/data/language/english.json b/assets/data/language/english.json
+new file mode 100644
+--- /dev/null	(date 1688947329737)
++++ b/assets/data/language/english.json	(date 1688947329737)
+@@ -0,0 +1,7 @@
++{
++  "language.name": "English",
++  "language.region": [
++    "World"
++  ],
++  "test.first": "Hello World!"
++}
+\ No newline at end of file
+Index: assets/data/language/forestrian.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/assets/data/language/forestrian.json b/assets/data/language/forestrian.json
+new file mode 100644
+--- /dev/null	(date 1688947329594)
++++ b/assets/data/language/forestrian.json	(date 1688947329594)
+@@ -0,0 +1,5 @@
++{
++  "language.name": "Forestrian",
++  "language.region": "Forestria",
++  "test.first": "Hallo weīlt!"
++}
+\ No newline at end of file
+Index: assets/assets/font/fontcyrilic.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/assets/assets/font/fontcyrilic.json b/assets/assets/font/fontcyrilic.json
+new file mode 100644
+--- /dev/null	(date 1688947329475)
++++ b/assets/assets/font/fontcyrilic.json	(date 1688947329475)
+@@ -0,0 +1,7 @@
++{
++  "fontSrc": {
++    "fontPath": "",
++    "fontChars": [],
++    "fontSystem": "Cyrilic"
++  }
++}
+\ No newline at end of file
+Index: assets/assets/font/fontgreek.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/assets/assets/font/fontgreek.json b/assets/assets/font/fontgreek.json
+new file mode 100644
+--- /dev/null	(date 1688947329703)
++++ b/assets/assets/font/fontgreek.json	(date 1688947329703)
+@@ -0,0 +1,7 @@
++{
++  "fontSrc": {
++    "fontPath": "",
++    "fontChars": [],
++    "fontSystem": "Hellenic"
++  }
++}
+\ No newline at end of file
+Index: assets/assets/font/fontdefault.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/assets/assets/font/fontdefault.json b/assets/assets/font/fontdefault.json
+new file mode 100644
+--- /dev/null	(date 1688947329625)
++++ b/assets/assets/font/fontdefault.json	(date 1688947329625)
+@@ -0,0 +1,7 @@
++{
++  "fontSrc": {
++    "fontPath": "",
++    "fontChars": [],
++    "fontSystem": "Latin"
++  }
++}
+\ No newline at end of file
+diff --git a/assets/data/gui/gui.json b/assets/data/gui/gui.json
+new file mode 100644
